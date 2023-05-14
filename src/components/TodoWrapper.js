@@ -30,13 +30,15 @@ const TodoWrapper = () => {
   }
   return (
     <div className='TodoWrapper'>
+
       <TodoForm addTodo={addTodo} />
-      {todos.map((todo,index)=> (todo.isEditing ? 
+      {todos.map((todo,index) => (todo.isEditing ? 
       (
         <EditTodoForm editTodo = {editTask} task={todo}/>
       ) : ( 
         <Todo task={todo} key={index} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodoForm={editTodoForm}/>)
       ))}
+
     </div>
   )
 }
